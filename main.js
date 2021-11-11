@@ -12,7 +12,7 @@ const router = new Router()
 // 定义变量
 const rootImage = resolve(__dirname, 'uploads')
 const config = {
-  url: 'http://127.0.0.1:8888'
+  url: 'http://121.41.165.210:80'
 }
 
 // 设置跨域
@@ -68,6 +68,6 @@ router.post('/api/upload', upload.single('image'), async (ctx, next) => {
 app.use(router.routes())
 app.use(router.allowedMethods())
 
-app.listen(8888, () => {
+app.listen(80, () => {
   console.log('LemonBed图床服务器启动成功~')
 })
